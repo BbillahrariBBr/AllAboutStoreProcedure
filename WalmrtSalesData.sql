@@ -103,6 +103,17 @@ end
 --
 select [time], time_of_day, * from WalmartSalesData 
 
+------day_name-------
+--select [date], FORMAT([date], 'ddd') as day_name from WalmartSalesData
+
+alter table WalmartSalesData
+add day_name varchar(5);
+
+update WalmartSalesData set day_name = FORMAT([date], 'ddd')
+
+--select [date], day_name, * from WalmartSalesData
+
+
    -----  ------------
 
 
