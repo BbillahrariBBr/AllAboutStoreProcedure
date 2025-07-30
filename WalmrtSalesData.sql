@@ -113,7 +113,16 @@ update WalmartSalesData set day_name = FORMAT([date], 'ddd')
 
 --select [date], day_name, * from WalmartSalesData
 
+----- month_name
 
+select [date], FORMAT([date], 'MMM')as month_name, * from WalmartSalesData
+
+alter table WalmartSalesData 
+add month_name varchar(5)
+
+update WalmartSalesData set month_name =  FORMAT([date], 'MMM')
+
+select * from WalmartSalesData
    -----  ------------
 
 
