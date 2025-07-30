@@ -106,6 +106,8 @@ select [time], time_of_day, * from WalmartSalesData
 ------day_name-------
 --select [date], FORMAT([date], 'ddd') as day_name from WalmartSalesData
 
+select [date], datename(dw,[date]) as dN from WalmartSalesData
+
 alter table WalmartSalesData
 add day_name varchar(5);
 
@@ -124,6 +126,23 @@ update WalmartSalesData set month_name =  FORMAT([date], 'MMM')
 
 select * from WalmartSalesData
    -----  ------------
+
+
+   -------------------------------------------------------------------------------------------------------
+   -----------------------Generic Question---------------------------------
+   ------ 1. How many unique cities does the data have?
+   
+   SELECT DISTINCT city
+FROM WalmartSalesData;
+   
+ --select   city from WalmartSalesData group by city
+
+
+
+
+
+
+   ---------------------------
 
 
 
