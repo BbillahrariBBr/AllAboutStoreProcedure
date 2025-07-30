@@ -137,10 +137,11 @@ FROM WalmartSalesData;
    
  --select   city from WalmartSalesData group by city
 
+ ------------------- In which city is each branch?---------------
 
+select distinct branch from WalmartSalesData
 
-
-
+select distinct city, branch from WalmartSalesData
 
    ---------------------------
 
